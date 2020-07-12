@@ -1,0 +1,131 @@
+<app-header></app-header>
+<div class="main-page">
+    <section>
+        <div class="slidershow-box">
+            <div class="logo-slides">
+                <a class="slider-btn prev" onclick="plusSlides(-1)">&#10094;</a>
+                <img class="slides-logo" src="../../../assets/img/favicon.png" style="width: 20%">
+                <a class="slider-btn next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mySlides fade">
+                <img class="1" src="../../../assets/img/slider1.png" style="width: 100%">
+            </div>
+            <div class="mySlides fade">
+                <img class="2" src="../../../assets/img/slider2.png" style="width: 100%">
+            </div>
+            <div class="mySlides fade">
+                <img class="3" src="../../../assets/img/slider3.png" style="width: 100%">
+            </div>
+            <div class="mySlides fade">
+                <img class="4" src="../../../assets/img/slider4.png" style="width: 100%">
+            </div>
+            <div class="mySlides fade">
+                <img class="5" src="../../../assets/img/slider5.png" style="width: 100%">
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="sliderToogler(1)"></span>
+                <span class="dot" onclick="sliderToogler(2)"></span>
+                <span class="dot" onclick="sliderToogler(3)"></span>
+                <span class="dot" onclick="sliderToogler(4)"></span>
+                <span class="dot" onclick="sliderToogler(5)"></span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="popular-box">
+            <div class="popular-text">
+                <h2>Топ продаж</h2>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a [routerLink]="['/'+accessories, 1]" class="popular">
+                            <div class="black-back"></div>
+                            <div class="img-top">
+                                <img src="../../../assets/img/test1.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+battery, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test2.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+complects, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test3.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+accessories, 2]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test4.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a [routerLink]="['/'+accessories, 1]" class="popular">
+                            <div class="black-back"></div>
+                            <div class="img-top">
+                                <img src="../../../assets/img/test1.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+battery, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test2.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+complects, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test3.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+accessories, 2]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test4.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a [routerLink]="['/'+accessories, 1]" class="popular">
+                            <div class="black-back"></div>
+                            <div class="img-top">
+                                <img src="../../../assets/img/test1.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+battery, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test2.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+complects, 1]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test3.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                        <a [routerLink]="['/'+accessories, 2]" class="popular">
+                            <div class="img-top">
+                                <img src="../../../assets/img/test4.jpg" alt="" style="width: 100%">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="main-map">
+            <div class="text-map">
+                <h2>На карті</h2>
+            </div>
+            <div class="photo-map">
+                <a href="https://www.google.com/maps/d/u/1/viewer?mid=1QLWZSK2kJojf62gANvwPvtW2uXH3YlWA&ll=49.84356184416253%2C24.038583150637805&z=13"
+                    class="google-map">
+                    <div class="google-maps">
+                        <img src="../../../assets/img/maps.jpg" alt="" style="width: 100%">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<app-footer></app-footer>

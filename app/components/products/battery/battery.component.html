@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="navigation">
+            <a routerLink="/home">
+                <span class="glyphicon glyphicon-home"></span>
+            </a>
+            <span class="navigation-text">
+                <a routerLink="/categories">Категорії</a>
+                /
+                <a routerLink="/category-view/{{category}}">{{category}}</a>
+                / {{element.id}}
+            </span>
+        </div>
+    </div>
+    <div class="element-photo-box">
+        <a href="#" class="element-photo">
+            <div class="img-top">
+                <img src="../../../assets/img/{{element.picture}}" alt="" style="width: 100%">
+            </div>
+        </a>
+    </div>
+    <div class="element-info-box">
+        <h1>{{element.name}}</h1>
+        <h5>{{brand.name}}}</h5>
+        <h5>Тип Батареї : {{element.type}}</h5>
+        <h5>APM : {{element.apm}}</h5>
+        <h5>Країна : {{country.name}}</h5>
+        <h5>Ціна: {{element.price}} грн</h5>
+        <h5>В наявності</h5>
+    </div>
+    <div class="element-info-description">
+        <h4>Опис :</h4>
+        <h6>{{element.description}}</h6>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+<script src="../../../assets/js/script.js"></script>

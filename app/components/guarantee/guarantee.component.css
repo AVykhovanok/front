@@ -1,0 +1,29 @@
+/*Guarantee*/
+.guarantee-photo-box {
+    width:200%;
+    margin-right: 10%;
+}
+
+.guarantee-info{
+    padding: 0% 0% 0% 0%;
+}
+
+.guarantee-info-box {
+
+}
+.guarantee-info-description{
+    padding-top: 10%;
+    padding-bottom: 5%;
+    justify-content: flex-end;
+}
+.guarantee-top{
+    display: flex;
+    flex-direction: row;
+    padding:0% 9% 0% 9%;
+    justify-content: space-between;
+}
+
+.navigation {
+    padding: 40px 0px 20px 10%;
+    display: block;
+}

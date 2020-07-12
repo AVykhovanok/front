@@ -1,0 +1,440 @@
+/* You can add global styles to this file, and also import other style files */
+/*main*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    position: fixed
+}
+
+/*search animation */
+.header-search {
+    float: right;
+    height: 65px;
+    margin-right: 10px;
+}
+
+form {
+    position: fixed;
+    top: 4%;
+    left: 98%;
+    transform: translate(-100%, -50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    z-index: 200;
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover {
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input {
+    display: block;
+}
+
+form:hover .fa {
+    background: #07051a;
+    color: white;
+}
+
+/**********************/
+
+.categories-page, .guarantee-page, .contacts-page, .cooperation-page {
+}
+
+.header-box {
+    z-index: 20;
+    background-color: black;
+    height: 66px;
+    position: fixed;
+    width: 100%;
+    animation: 10s;
+}
+
+.header-menu {
+    float: left;
+    padding: 20px 50px 20px 20px;
+}
+
+.header-menu-icon {
+    height: 26px;
+}
+
+.header-logo {
+    float: left;
+    padding: 20px 0 20px 0;
+}
+
+.nav-link {
+    color: white;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.header-search-icon {
+    z-index: 20;
+    height: 30px;
+    position: absolute;
+    position: fixed;
+}
+
+.slidershow-box {
+    padding-top: 66px;
+    height: 100%;
+    margin: auto;
+
+}
+
+.logo-slides {
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding-top: 10%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-btn {
+    cursor: pointer;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8)
+}
+
+.slider-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4.0s;
+    animation-name: fade;
+    animation-duration: 4.0s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    padding: 0% 0% 0% 2%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+
+.overlay a {
+    padding: 9px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay h2:hover {
+    color: #969696;
+}
+
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    left: 3%;
+    font-size: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.carousel-inner .active{
+    background: white;
+    padding-top: 2%;
+}
+
+.popular-text {
+    padding: 2% 0 0 0;
+}
+
+.popular-box {
+    padding: 0 10% 10% 10%;
+    font-size: 100%;
+}
+
+.popular {
+    margin: auto;
+    width: 25%;
+    padding-right: 5%;
+    float: left;
+}
+
+.popular img:hover {
+    background-color: black;
+    opacity: .9;
+    z-index: 2222;
+}
+
+.img-top {
+    margin: auto;
+    padding: 0.4%
+
+}
+
+.insta-box {
+    padding: 0 0 40% 10%;
+}
+
+.text-map {
+    padding: 0 0 0 10%;
+}
+
+.footer-box {
+
+}
+
+.footer-info {
+}
+
+.footer-text {
+
+}
+
+.time-table {
+    float: left;
+    margin: 2% 0 0 2%;
+    color: white;
+
+}
+
+.your-shops {
+    float: right;
+    margin: 2% 2% 0 0;
+    color: white
+}
+
+.footer-logo {
+    text-align: center;
+    background-color: black;
+}
+
+/*categories*/
+.navigation {
+    padding: 100px 0px 0px 10%;
+    float: left;
+
+}
+
+.navigation-text {
+    padding: 80px 10% 0 0;
+}
+
+.navigation-categ {
+    float: left;
+    text-decoration: none;
+    color: black;
+    padding: 0px 5px 0px 0px;
+}
+
+.categories {
+    margin: 0% 0% 0% 10%;
+}
+
+.categories-button {
+    width: 40%;
+    float: left;
+    padding: 2%
+}
+
+.element-photo-box {
+    width: 40%;
+    float: left;
+    padding: 20px 20px 0px 150px;
+}
+
+.element-info-box {
+    padding: 0px 0px 0px 0px;
+}
+
+.element-class {
+    display: flex;
+
+}
+
+.main-info {
+    display: flex;
+    width: 80%;
+    background-color: lemonchiffon;
+    height: 400px;
+    margin-bottom: 25px;
+    margin: auto;
+}
+
+.page-img {
+    width: 70%;
+    background-color: #717171;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tovar-info {
+    width: 30%;
+    background-color: blue;
+    display: flex;
+    width: 30%;
+    background-color: blue;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.page-img, .tovar-info {
+    padding: 15px;
+}
+
+.other-info {
+    background-color: brown;
+    width: 80%;
+    margin: auto;
+    height: 120px;
+}
+
+.main-block {
+    width: 80%;
+    margin: auto;
+    height: auto;
+}
+
+.row {
+    width: auto;
+    height: 250px;
+    /*background-color: coral;*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.elem {
+    background-color: azure;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: antiquewhite;
+}

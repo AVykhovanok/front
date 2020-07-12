@@ -1,0 +1,25 @@
+.navigation {
+    padding: 40px 0px 20px 10%;
+    display: block;
+}
+
+.element-photo-box {
+    float: left;
+    max-width: 600px;
+    max-height: 600px;
+
+}
+
+.elem {
+    background-color: azure;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: antiquewhite;
+}
+
+.container{
+    margin-bottom: 5%;
+}

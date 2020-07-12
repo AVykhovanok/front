@@ -1,0 +1,30 @@
+.contacts-photo-box {
+    height:600px;
+    width: 700px;
+}
+
+.contacts-info{
+    padding: 0% 5% 0% 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.contacts-info-box {
+
+}
+.contacts-info-description{
+    padding-top: 10%;
+    padding-bottom: 5%;
+    justify-content: flex-end;
+}
+.contacts-top{
+    display: flex;
+    flex-direction: row;
+    padding:0% 9% 0% 9%;
+    justify-content: space-between;
+}
+
+.navigation {
+    padding: 20px 0px 20px 10%;
+    display: block;
+}

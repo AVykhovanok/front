@@ -1,0 +1,153 @@
+<nav class="navbar">
+  <app-header></app-header>
+</nav>
+<div class="container tm-mt-big tm-mb-big">
+  <div class="row">
+    <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+      <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="tm-block-title d-inline-block">Add Product</h1>
+          </div>
+        </div>
+        <div class="tm-edit-product-row">
+          <form form="model" (ngSubmit)="onSubmit()" class="tm-edit-product-form">
+            <div class="form-group mb-3">
+              <label for="name">Product Name
+              </label>
+              <input id="name" name="name" type="text" [(ngModel)]="model.name" class="form-control">
+            </div>
+            <div class="form-group mb-3" 
+            *ngIf="category=='accessories' || category=='battery' 
+            || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='mechmod'">
+              <label for="batteryType">Battery Type
+              </label>
+              <input id="batteryType" name="batteryType" type="number" [(ngModel)]="model.batteryType"
+                class="form-control">
+            </div>
+            <div class="form-group mb-3" 
+            *ngIf="category=='battery' || category=='charger'">
+              <label for="apm">APM
+              </label>
+              <input id="apm" name="apm" type="number" [(ngModel)]="model.apm"
+                class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='accessories' || category=='boxmod' || category=='charger'
+            || category=='complects' 
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+              <label for="color">Color
+              </label>
+              <input id="color" name="color" type="text" [(ngModel)]="model.color" class="form-control">
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-xs-12 col-sm-6"
+              *ngIf="category=='accessories' 
+            || category=='complects' || category=='consumables'
+             || category=='rda' || category=='rdta' || category=='rta'">
+                <label for="diameter">Diameter
+                </label>
+                <input id="diameter" name="diameter" type="number" [(ngModel)]="model.diameter" step="0.1"
+                  class="form-control">
+              </div>
+              <div class="form-group mb-3 col-xs-12 col-sm-6"
+              *ngIf="category=='consumables' || category=='rdta' || category=='rta'">
+                  <label for="volume">Volume
+                  </label>
+                  <input id="volume" name="volume" type="number" [(ngModel)]="model.volume" step="0.1"
+                    class="form-control">
+                </div>
+              <div class="form-group mb-3 col-xs-12 col-sm-6"
+              *ngIf="category=='accessories' || category=='charger'">
+                <label for="numbOfBat">Number of Bat
+                </label>
+                <input id="numbOfBat" name="numbOfBat" type="number" [(ngModel)]="model.numbOfBat" class="form-control">
+              </div>
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='accessories' || category=='battery' || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='components' || category=='consumables' || category=='liquid'
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+              <label for="price">Product Price
+              </label>
+              <input id="price" name="price" type="number" [(ngModel)]="model.price" class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='accessories' || category=='battery' || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='components' || category=='consumables' || category=='liquid'
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+              <label for="description">Description</label>
+              <textarea class="form-control validate" rows="3" [(ngModel)]="model.desc" name="desc"
+                [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='complects' || category=='components' || category=='liquid'">
+              <label for="value">Value
+              </label>
+              <input id="value" name="value" type="text" [(ngModel)]="model.value" class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='components' || category=='liquid'">
+              <label for="nic">NIC
+              </label>
+              <input id="nic" name="nic" type="text" [(ngModel)]="model.nic" class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='consumables'">
+              <label for="weight">Weight
+              </label>
+              <input id="weight" name="weight" type="text" [(ngModel)]="model.weight" class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='rda' || category=='rdta' || category=='rta'">
+              <label for="typeRefill">Type Refill
+              </label>
+              <input id="typeRefill" name="typeRefill" type="text" [(ngModel)]="model.typeRefill" class="form-control">
+            </div>
+            <div class="form-group mb-3"
+            *ngIf="category=='accessories' || category=='battery' || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='components' || category=='consumables' || category=='liquid'
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+              <label for="picture">Product Picture Name
+              </label>
+              <input id="picture" name="picture" type="text" [(ngModel)]="model.picture" class="form-control">
+            </div>
+            <div class="custom-file mt-5 mb-5"
+            *ngIf="category=='accessories' || category=='battery' || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='components' || category=='consumables' || category=='liquid'
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+              <div class="form-group mb-3">
+                <label for="brand">Brand</label>
+                <select name="brand" class="custom-select tm-select-accounts" (ngModelChange)="onBrandChange($event)"
+                  [ngModel]="model.brand">
+                  <option selected="">Select brand</option>
+                  <option *ngFor="let item of brandList; index as i; trackBy: trackByFn" [value]="item.id">{{item.name}}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group mb-3"
+              *ngIf="category=='accessories' || category=='battery' || category=='boxmod' || category=='charger'
+            || category=='complects' || category=='components' || category=='consumables' || category=='liquid'
+            || category=='mechmod' || category=='rda' || category=='rdta' || category=='rta'">
+                <label for="country">Country</label>
+                <select name="country" class="custom-select tm-select-accounts"
+                  (ngModelChange)="onCountryChange($event)" [(ngModel)]="model.country">
+                  <option selected="">Select country</option>
+                  <option *ngFor="let item of countryList; index as i; trackBy: trackByFn" [value]="item.id">
+                    {{item.name}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 mt-5">
+              <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,185 @@
+<body id="reportsPage">
+  <app-header></app-header>
+  <div class="container mt-5">
+    <div class="row tm-content-row">
+      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-products">
+          <div class="tm-product-table-container">
+            <table class="table table-hover tm-table-small tm-product-table">
+              <thead>
+                <tr>
+                  <th scope="col">PRODUCT NAME</th>
+                  <th scope="col">PRODUCT PRICE</th>
+                  <th scope="col">IN STOCK</th>
+                  <th scope="col">EXPIRE DATE</th>
+                  <th scope="col">&nbsp;</th>
+                  <th scope="col">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let item of itemList; index as i; trackBy: trackByFn">
+                <tr>
+                  <td class="tm-product-name">{{item.name}}</td>
+                  <td>{{item.price}}$</td>
+                  <td>550</td>
+                  <td>28 March 2019</td>
+                  <td>
+                    <a [routerLink]="['/edit-product/'+selectedCategory, item.id]" class="tm-product-delete-link">
+                      <i class="material-icons md-18">create</i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="tm-product-delete-link" (click)="deleteProduct(item.id)">
+                      <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- table container -->
+          <a [routerLink]="['/add-product/'+selectedCategory]" class="btn btn-primary btn-block text-uppercase mb-3">Add
+            new product</a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-product-categories">
+          <h2 class="tm-block-title">Product Categories</h2>
+          <div class="tm-product-table-container">
+            <table class="table tm-table-small tm-product-table">
+              <tbody>
+                <tr>
+                  <td class="tm-product-name">Accessories</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('accessories')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Battery</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('battery')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Boxmod</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('boxmod')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Charger</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('charger')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Complects</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('complects')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Components</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('components')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Consumables</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('consumables')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Liquid</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('liquid')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">Mechmod</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('mechmod')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">RDA</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('rda')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">RDTA</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('rdta')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tm-product-name">RTA</td>
+                  <td class="text-center">
+                    <a (click)="getProducts('rta')">
+                      <i class="material-icons md-36">
+                        forward
+                      </i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+  <script>
+    $(function () {
+      $(".tm-product-name").on("click", function () {
+        window.location.href = "edit-product.html";
+      });
+    });
+  </script>

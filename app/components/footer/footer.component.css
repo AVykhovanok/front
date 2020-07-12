@@ -1,0 +1,28 @@
+.footer-box{
+height: 10em;
+width: 100%;
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+    background-color:black;
+    color: white;
+}
+.footer-logo{
+    border: 1em solid red;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+  background-color: black;
+text-align: center;
+}
+.logo-footer{
+    width: 80%;
+}
+.time-table-text{
+    padding: 0% 0% 0% 10%;
+}
+ .your-shops-text{
+    padding: 0% 10% 0% 0%;
+}

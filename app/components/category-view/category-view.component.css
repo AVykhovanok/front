@@ -1,0 +1,71 @@
+.wrapper #products {
+    margin: 1rem 0;
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#products li {
+ height: 250px;
+ width: 33.333333%;
+ display: inline-block;
+ box-sizing: border-box;
+ padding-right: 10px;
+ padding-bottom: 20px;
+}
+
+#products li > div, #products li > div a {
+    display: inline-block;
+    height: 100%;
+}
+
+#products li > div a img {
+    height: 100%;
+    width: auto;
+}
+
+.container {
+    padding-top: 5%;
+}
+
+.product {
+    padding-bottom: 30px;
+}
+
+.info {
+    display: block;
+}
+
+.name {
+    display: inline-block;
+    padding-right: 20%; 
+}
+
+.price {
+    display: inline-block;
+}
+
+.title {
+    margin-left: 20%;
+}
+
+.navigation {
+    padding:  10% 0 0 0;
+    display: block;
+    color: black;
+}
+
+.navigation-text {
+    padding: 0 0 0 0;
+    margin-left: 10px;
+    font-size: 13px; 
+    display: inline-block;
+    color: black;
+    text-transform: capitalize;
+}
+
+.navigation a{
+    position: relative;
+    color: black;
+}
